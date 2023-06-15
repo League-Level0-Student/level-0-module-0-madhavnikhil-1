@@ -17,44 +17,46 @@ public class StarShow {
 		// This code will draw one star whose size is 150 pixels per side....
 		// but first you have to write some code. Find the drawStar() method and 
 		// write the code to draw a star.
-		drawStar(150);
 		
 		// Run the program. Check that your star is the same as the first picture in the recipe.
 		// Remove the drawStar(150) from the program before you proceed.
 		
 		// Set the robot speed to 100
-
+batman.setSpeed(100);
 		// Make a variable to hold the X position of the Robot and set it to 10
-
+int xPosition = 10;
 		// Make a variable to hold the Y position of the Robot and set it to 600
-
+int yPosition = 600;
 		// Make a variable to hold the star size and set it to 25
-	
+	int starSize = 25;
 		// Make a variable to count how many stars have been drawn and set it to 0
-
+	int star = 0;
 		// LOOP: Start a while loop to repeat the following code until 7 stars have been drawn
+while (star < 7) {
+	batman.setPenWidth(star);
+	
 
 			// Set the pen width to the number of stars drawn so far
 
 			// Set the X position of the robot to your X variable
-
+batman.setX(xPosition);
 			// Set the Y position of the robot to your Y variable
-
+batman.setY(yPosition);
 			// Call the drawStar() method with your star size variable
-
+drawStar(starSize);
 			// Increase the value of the X position variable by star size. See Figure 2
-
+xPosition += starSize;
 			// decrease the value of the Y position variable by star size. See Figure 3
-
+yPosition -= starSize;
 			// Increase the star size by 20
-
+starSize += 20;
 			// Turn the robot 12 degrees
-
+batman.turn(12);
 			// Change the pen color (random)
-
+star += 1;
 		
 			// Increase the number of stars that have been drawn by 1,
-		
+}	
 		
 		// End the while loop here
 
